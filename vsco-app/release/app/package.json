@@ -1,0 +1,18 @@
+{
+  "name": "vsco",
+  "version": "1.0.0",
+  "description": "A workspace for book authors.",
+  "license": "MIT",
+  "author": {
+    "name": "Telmo Beroiz",
+    "email": "iamtelmo@proton.me",
+    "url": "https://telmoberoiz.xyz"
+  },
+  "main": "./dist/main/main.js",
+  "scripts": {
+    "rebuild": "node -r ts-node/register ../../.vsco/scripts/electron-rebuild.js",
+    "postinstall": "npm run rebuild && npm run link-modules",
+    "link-modules": "node -r ts-node/register ../../.vsco/scripts/link-modules.ts"
+  },
+  "dependencies": {}
+}
