@@ -1,9 +1,9 @@
-import BookEditor from '../pages/Editor/components/BookEditor';
+import VSCOEditor from 'vsco-editor';
 
 function EditorLayout() {
   return (
     <div className="flex h-screen overflow-hidden">
-      <BookEditor />
+      <VSCOEditor message="VSCO Editor rendering..." />
     </div>
   );
 }
