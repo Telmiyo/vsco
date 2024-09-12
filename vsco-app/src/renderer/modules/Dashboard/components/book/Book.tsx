@@ -1,47 +1,32 @@
-import React from 'react';
+const colors = {
+  default: '#D58936',
+  jasper: '#d73a4a',
+  glaucous: '#6a7f8c',
+  bronze: '#D58936',
+  brown: '#A44200',
+  satinSheenGold: '#A59132',
+} as const;
 
-const colorOptions = {
-  purple: '#6f46a3',
-  red: 'red',
-};
+// Create a type for the keys of the colors object
+type ColorKey = keyof typeof colors;
 
-const BookStyle: { [key: string]: React.CSSProperties } = {
-  container: {
-    transform: 'scale(0.8)',
-    position: 'relative',
-    width: '10rem',
-    height: '15rem',
-    backgroundColor: colorOptions.red,
-    backgroundImage:
-      'url(https://m.media-amazon.com/images/I/71Fbh0aeLDL._SL1500_.jpg)',
-    backgroundSize: 'cover',
-    borderRadius: '0.2rem',
-    overflow: 'hidden',
-    boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)',
-  },
-  leftCorner: {
-    width: '0.1rem',
-    height: '100%',
-    background: '#ffffffa1',
-    opacity: '0.1',
-    borderRight: '0.3rem solid #000000',
-    borderLeft: '0.2rem solid #000000',
-  },
-  content: {
-    position: 'relative',
-    zIndex: 2,
-    padding: '1rem',
-    height: '100%',
-  },
-};
+interface BookProperties {
+  coverColor: ColorKey;
+}
 
-export default function Book() {
+export default function Book({ coverColor }: BookProperties) {
+  // Get the color value from the colors object
+  const backgroundColor = colors[coverColor];
+
   return (
-    <div style={BookStyle.container}>
-      <div style={BookStyle.leftCorner} />
-      <div style={BookStyle.content}>
-        <h2>Book Title</h2>
-        <p>Author Name</p>
+    <div
+      className="relative transform scale-90 w-40 h-60 rounded overflow-hidden shadow-xl"
+      style={{ backgroundColor }}
+    >
+      <div className="absolute top-0 left-0 w-0.5 h-full bg-white bg-opacity-10 border-r-2 border-l-2 border-black" />
+      <div className="relative z-10 p-4 h-full">
+        <h2 className="text-black">Book Title</h2>
+        <p className="text-black">Author Name</p>
       </div>
     </div>
   );
