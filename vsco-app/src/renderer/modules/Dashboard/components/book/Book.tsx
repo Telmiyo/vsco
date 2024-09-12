@@ -20,7 +20,7 @@ export default function Book({ coverColor }: BookProperties) {
 
   return (
     <div
-      className="relative transform scale-90 w-40 h-60 rounded overflow-hidden shadow-xl"
+      className="relative transform w-28 h-40 rounded overflow-hidden shadow-xl"
       style={{ backgroundColor }}
     >
       <div className="absolute top-0 left-0 w-0.5 h-full bg-white bg-opacity-10 border-r-2 border-l-2 border-black" />
