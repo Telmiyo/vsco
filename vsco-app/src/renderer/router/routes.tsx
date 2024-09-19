@@ -1,12 +1,12 @@
 import { lazy } from 'react';
 import { Navigate } from 'react-router-dom';
-import Editor from '../modules/Editor';
+import Editor from '../modules/editor';
 
-const Dashboard = lazy(() => import('../modules/Dashboard/index'));
-const Books = lazy(() => import('../modules/Dashboard/views/Books'));
-const Settings = lazy(() => import('../modules/Dashboard/views/Settings'));
-const Notes = lazy(() => import('../modules/Dashboard/views/Notes'));
-const Profile = lazy(() => import('../modules/Dashboard/views/Profile'));
+const Dashboard = lazy(() => import('../modules/dashboard/index'));
+const Books = lazy(() => import('../modules/dashboard/views/Books'));
+const Settings = lazy(() => import('../modules/dashboard/views/Settings'));
+const Notes = lazy(() => import('../modules/dashboard/views/Notes'));
+const Profile = lazy(() => import('../modules/dashboard/views/Profile'));
 
 const routes = [
   {

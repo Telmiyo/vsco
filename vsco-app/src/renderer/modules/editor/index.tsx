@@ -1,4 +1,4 @@
-import EditorLayout from '../../layouts/EditorLayout';
+import EditorLayout from './layouts/EditorLayout';
 
 function Editor() {
   return <EditorLayout />;
