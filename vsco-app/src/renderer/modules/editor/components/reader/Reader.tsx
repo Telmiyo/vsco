@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { ReactReader } from 'react-reader';
 import { ReaderManager, ITheme } from './ReaderManager';
 
-export default function Reader() {
+interface ReaderProps {
+  onTocChanged: (toc: any[]) => void;
+}
+
+export default function Reader({ onTocChanged }: ReaderProps) {
   const [location, setLocation] = useState<string | number>(0);
   const [theme, setTheme] = useState<ITheme>('light');
   const readerManager = new ReaderManager();
@@ -21,6 +25,7 @@ export default function Reader() {
         readerManager.updateTheme(rendition, theme);
       }}
       showToc={false}
+      tocChanged={(toc) => onTocChanged(toc)}
     />
   );
 }
