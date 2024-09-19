@@ -69,6 +69,9 @@ const createWindow = async () => {
     height: 728,
     icon: getAssetPath('icon.png'),
     webPreferences: {
+      defaultFontFamily: {
+        standard: 'Georgia',
+      },
       preload: app.isPackaged
         ? path.join(__dirname, 'preload.js')
         : path.join(__dirname, '../../.vsco/dll/preload.js'),

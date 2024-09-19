@@ -20,7 +20,7 @@ body {
   height: 100vh;
   width: 100vw;
   background: #ece8dd;
-  font-family: 'Sailec Light', sans-serif;
+  font-family: 'Sailec Light', Georgia, serif;
   padding: 0;
   margin: 0;
 }
