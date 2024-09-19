@@ -1,6 +1,10 @@
+import Reader from '../components/reader/Reader';
+
 function EditorLayout() {
   return (
-    <div className="flex h-screen overflow-hidden">Rendering editor...</div>
+    <div className="w-full h-screen overflow-hidden">
+      <Reader />
+    </div>
   );
 }
 
