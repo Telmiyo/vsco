@@ -6,7 +6,7 @@ import '../../../styles/type-animation.css';
 const quote = `"The silence often of pure innocence persuades when speaking fails."
 — William Shakespeare, The Winter's Tale`;
 
-function Books() {
+function Home() {
   const navigate = useNavigate();
 
   function createBook() {
@@ -22,10 +22,10 @@ function Books() {
   }
 
   return (
-    <>
+    <div className="w-full h-full flex flex-col justify-center items-center">
       {/* Header */}
-      <div className="flex flex-col justify-center items-center mb-8">
-        <div className="w-fit flex flex-col items-center">
+      <div className="flex flex-col justify-center items-center mb-8 ">
+        <div className="w-fit flex flex-col items-center ">
           <img src={logo} alt="logo" className="w-28" />
           {/* Typewriting effect on the heading */}
           <div className="typewriter w-fit">
@@ -39,14 +39,14 @@ function Books() {
           </div>
           <button
             type="button"
-            className="button-primary mt-8"
+            className="dashboard-button-primary mt-8"
             onClick={createBook}
           >
             Write a New Book
           </button>
         </div>
       </div>
-      {/* User Books */}
+      {/* User Home */}
       <div className="flex flex-col justify-center items-center">
         <div className="w-fit grid grid-cols-4 gap-8">
           <Book coverColor="jasper" />
@@ -55,8 +55,8 @@ function Books() {
           <Book coverColor="glaucous" />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
-export default Books;
+export default Home;

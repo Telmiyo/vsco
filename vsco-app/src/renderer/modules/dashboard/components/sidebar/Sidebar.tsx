@@ -42,7 +42,7 @@ function Sidebar() {
               type="button"
               aria-label="books"
               className="flex items-center justify-center"
-              onClick={() => navigate('/dashboard/books')}
+              onClick={() => navigate('/dashboard/home')}
             >
               <CiHome size={24} />
             </button>

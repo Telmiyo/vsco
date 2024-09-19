@@ -1,5 +1,5 @@
 import DashboardLayout from './layouts/DashboardLayout';
-import '../../styles/dashboard.css';
+import './dashboard.css';
 
 function Dashboard() {
   return <DashboardLayout />;

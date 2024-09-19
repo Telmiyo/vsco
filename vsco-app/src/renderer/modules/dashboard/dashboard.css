@@ -1,0 +1,17 @@
+/* Dashboard specific styles for tailwind */
+.dashboard-button-primary {
+  @apply bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded transition-transform duration-100 ease-in transform hover:scale-105 opacity-90 hover:opacity-100;
+}
+
+.dashboard-button-secondary {
+  @apply bg-gray-300 hover:bg-gray-400 text-black font-semibold py-2 px-4 rounded transition-transform duration-100 ease-in transform hover:scale-105 opacity-90 hover:opacity-100;
+}
+
+.dashboard-heading {
+  @apply text-black;
+}
+
+/* Additional custom styles */
+.dashboard-container {
+  @apply flex-1 p-6 overflow-auto animate-fade animate-once animate-duration-[1000ms] animate-delay-100 animate-ease-linear
+}
