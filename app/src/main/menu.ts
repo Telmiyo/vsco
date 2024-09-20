@@ -57,14 +57,14 @@ export default class MenuBuilder {
       label: 'Electron',
       submenu: [
         {
-          label: 'About VSCO',
+          label: 'About aveline',
           selector: 'orderFrontStandardAboutPanel:',
         },
         { type: 'separator' },
         { label: 'Services', submenu: [] },
         { type: 'separator' },
         {
-          label: 'Hide VSCO',
+          label: 'Hide aveline',
           accelerator: 'Command+H',
           selector: 'hide:',
         },

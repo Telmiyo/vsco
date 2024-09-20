@@ -9,7 +9,7 @@ import {
   CiMaximize2,
 } from 'react-icons/ci';
 
-import VSCO_ICON from '../../../../../../assets/icon.svg';
+import aveline_ICON from '../../../../../../assets/icon.svg';
 
 function Sidebar() {
   // Initialize state with value from localStorage or default to true
@@ -79,10 +79,10 @@ function Sidebar() {
           </li>
         </ul>
       </aside>
-      {/* VSCO Icon */}
+      {/* aveline Icon */}
       <img
-        src={VSCO_ICON}
-        alt="vsco-icon"
+        src={aveline_ICON}
+        alt="aveline-icon"
         className={`${fadeIn} w-14 fixed left-4 top-4 ${isFullscreen ? 'hidden' : ''}  animate-fade-right animate-once animate-duration-[600ms] animate-ease-in-out`}
       />
       {/* Fullscreen Button */}

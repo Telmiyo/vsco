@@ -12,7 +12,7 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "allowJs": true,
-    "outDir": ".vsco/dll"
+    "outDir": ".aveline/dll"
   },
-  "exclude": ["test", "release/build", "release/app/dist", ".vsco/dll"]
+  "exclude": ["test", "release/build", "release/app/dist", ".aveline/dll"]
 }

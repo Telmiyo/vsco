@@ -1,4 +1,4 @@
-<img src=".vsco/img/erb-banner.svg" width="100%" />
+<img src=".aveline/img/erb-banner.svg" width="100%" />
 
 <br>
 

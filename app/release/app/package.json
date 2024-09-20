@@ -1,5 +1,5 @@
 {
-  "name": "vsco",
+  "name": "aveline",
   "version": "1.0.0",
   "description": "A workspace for book authors.",
   "license": "MIT",
@@ -10,9 +10,9 @@
   },
   "main": "./dist/main/main.js",
   "scripts": {
-    "rebuild": "node -r ts-node/register ../../.vsco/scripts/electron-rebuild.js",
+    "rebuild": "node -r ts-node/register ../../.aveline/scripts/electron-rebuild.js",
     "postinstall": "npm run rebuild && npm run link-modules",
-    "link-modules": "node -r ts-node/register ../../.vsco/scripts/link-modules.ts"
+    "link-modules": "node -r ts-node/register ../../.aveline/scripts/link-modules.ts"
   },
   "dependencies": {}
 }

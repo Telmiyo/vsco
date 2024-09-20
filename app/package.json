@@ -1,15 +1,15 @@
 {
   "description": "A workspace for book authors",
   "keywords": [
-    "vsco"
+    "aveline"
   ],
-  "homepage": "https://github.com/Telmiyo/vsco-app#readme",
+  "homepage": "https://github.com/Telmiyo/aveline-app#readme",
   "bugs": {
-    "url": "https://github.com/Telmiyo/vsco-app/issues"
+    "url": "https://github.com/Telmiyo/aveline-app/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+git@github.com:Telmiyo/vsco-app.git"
+    "url": "git+git@github.com:Telmiyo/aveline-app.git"
   },
   "license": "MIT",
   "author": {
@@ -21,17 +21,17 @@
   "main": "./src/main/main.ts",
   "scripts": {
     "build": "concurrently \"npm run build:main\" \"npm run build:renderer\"",
-    "build:dll": "cross-env NODE_ENV=development TS_NODE_TRANSPILE_ONLY=true webpack --config ./.vsco/configs/webpack.config.renderer.dev.dll.ts",
-    "build:main": "cross-env NODE_ENV=production TS_NODE_TRANSPILE_ONLY=true webpack --config ./.vsco/configs/webpack.config.main.prod.ts",
-    "build:renderer": "cross-env NODE_ENV=production TS_NODE_TRANSPILE_ONLY=true webpack --config ./.vsco/configs/webpack.config.renderer.prod.ts",
-    "postinstall": "ts-node .vsco/scripts/check-native-dep.js && electron-builder install-app-deps && npm run build:dll",
+    "build:dll": "cross-env NODE_ENV=development TS_NODE_TRANSPILE_ONLY=true webpack --config ./.aveline/configs/webpack.config.renderer.dev.dll.ts",
+    "build:main": "cross-env NODE_ENV=production TS_NODE_TRANSPILE_ONLY=true webpack --config ./.aveline/configs/webpack.config.main.prod.ts",
+    "build:renderer": "cross-env NODE_ENV=production TS_NODE_TRANSPILE_ONLY=true webpack --config ./.aveline/configs/webpack.config.renderer.prod.ts",
+    "postinstall": "ts-node .aveline/scripts/check-native-dep.js && electron-builder install-app-deps && npm run build:dll",
     "lint": "cross-env NODE_ENV=development eslint . --ext .js,.jsx,.ts,.tsx",
-    "package": "ts-node ./.vsco/scripts/clean.js dist && npm run build && electron-builder build --publish never && npm run build:dll",
+    "package": "ts-node ./.aveline/scripts/clean.js dist && npm run build && electron-builder build --publish never && npm run build:dll",
     "rebuild": "electron-rebuild --parallel --types prod,dev,optional --module-dir release/app",
-    "start": "ts-node ./.vsco/scripts/check-port-in-use.js && npm run start:renderer",
+    "start": "ts-node ./.aveline/scripts/check-port-in-use.js && npm run start:renderer",
     "start:main": "cross-env NODE_ENV=development electronmon -r ts-node/register/transpile-only .",
-    "start:preload": "cross-env NODE_ENV=development TS_NODE_TRANSPILE_ONLY=true webpack --config ./.vsco/configs/webpack.config.preload.dev.ts",
-    "start:renderer": "cross-env NODE_ENV=development TS_NODE_TRANSPILE_ONLY=true webpack serve --config ./.vsco/configs/webpack.config.renderer.dev.ts",
+    "start:preload": "cross-env NODE_ENV=development TS_NODE_TRANSPILE_ONLY=true webpack --config ./.aveline/configs/webpack.config.preload.dev.ts",
+    "start:renderer": "cross-env NODE_ENV=development TS_NODE_TRANSPILE_ONLY=true webpack serve --config ./.aveline/configs/webpack.config.renderer.dev.ts",
     "test": "jest"
   },
   "browserslist": [],
@@ -63,11 +63,11 @@
       "json"
     ],
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/.vsco/mocks/fileMock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/.aveline/mocks/fileMock.js",
       "\\.(css|less|sass|scss)$": "identity-obj-proxy"
     },
     "setupFiles": [
-      "./.vsco/scripts/check-build-exists.ts"
+      "./.aveline/scripts/check-build-exists.ts"
     ],
     "testEnvironment": "jsdom",
     "testEnvironmentOptions": {
@@ -75,7 +75,7 @@
     },
     "testPathIgnorePatterns": [
       "release/app/dist",
-      ".vsco/dll"
+      ".aveline/dll"
     ],
     "transform": {
       "\\.(ts|tsx|js|jsx)$": "ts-jest"
@@ -165,8 +165,8 @@
     "webpack-merge": "^5.9.0"
   },
   "build": {
-    "productName": "VSCO",
-    "appId": "org.vsco.app",
+    "productName": "aveline",
+    "appId": "org.aveline.app",
     "asar": true,
     "asarUnpack": "**\\*.{node,dll}",
     "files": [
@@ -175,7 +175,7 @@
       "package.json"
     ],
     "mac": {
-      "sign": ".vsco/scripts/notarize.js",
+      "sign": ".aveline/scripts/notarize.js",
       "notarize": false,
       "target": {
         "target": "default",

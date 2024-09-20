@@ -74,7 +74,7 @@ const createWindow = async () => {
       },
       preload: app.isPackaged
         ? path.join(__dirname, 'preload.js')
-        : path.join(__dirname, '../../.vsco/dll/preload.js'),
+        : path.join(__dirname, '../../.aveline/dll/preload.js'),
     },
   });
 
