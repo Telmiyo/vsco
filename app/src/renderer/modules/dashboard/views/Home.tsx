@@ -29,7 +29,7 @@ function Home() {
           <img src={logo} alt="logo" className="w-28" />
           {/* Typewriting effect on the heading */}
           <div className="typewriter w-fit">
-            <h2 className="w-fit">What are you going to write today?</h2>
+            <h2 className="w-fit">What are you going to read today?</h2>
           </div>
           {/* Quote Block */}
           <div className="">
@@ -42,7 +42,7 @@ function Home() {
             className="dashboard-button-primary mt-8"
             onClick={createBook}
           >
-            Write a New Book
+            open book
           </button>
         </div>
       </div>

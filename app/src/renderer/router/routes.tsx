@@ -4,9 +4,9 @@ import Editor from '../modules/editor/editor';
 
 const Dashboard = lazy(() => import('../modules/dashboard/dashboard'));
 const Home = lazy(() => import('../modules/dashboard/views/Home'));
+const Library = lazy(() => import('../modules/dashboard/views/Library'));
+const Bookmarks = lazy(() => import('../modules/dashboard/views/Bookmarks'));
 const Settings = lazy(() => import('../modules/dashboard/views/Settings'));
-const Notes = lazy(() => import('../modules/dashboard/views/Notes'));
-const Profile = lazy(() => import('../modules/dashboard/views/Profile'));
 
 const routes = [
   {
@@ -18,9 +18,9 @@ const routes = [
     element: <Dashboard />,
     children: [
       { path: 'home', element: <Home /> },
-      { path: 'notes', element: <Notes /> },
+      { path: 'library', element: <Library /> },
+      { path: 'bookmarks', element: <Bookmarks /> },
       { path: 'settings', element: <Settings /> },
-      { path: 'profile', element: <Profile /> },
     ],
   },
   {

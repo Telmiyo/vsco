@@ -3,13 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import {
   CiHome,
   CiSettings,
-  CiUser,
-  CiPen,
+  CiBookmark,
   CiMaximize1,
   CiMaximize2,
 } from 'react-icons/ci';
-
-import aveline_ICON from '../../../../../../assets/icon.svg';
+import { PiBooksThin } from 'react-icons/pi';
+import AVELINE_ICON from '../../../../../../assets/icon.svg';
 
 function Sidebar() {
   // Initialize state with value from localStorage or default to true
@@ -50,21 +49,21 @@ function Sidebar() {
           <li>
             <button
               type="button"
-              aria-label="notes"
+              aria-label="library"
               className="flex items-center justify-center"
-              onClick={() => navigate('/dashboard/notes')}
+              onClick={() => navigate('/dashboard/library')}
             >
-              <CiPen size={24} />
+              <PiBooksThin size={24} />
             </button>
           </li>
           <li>
             <button
               type="button"
-              aria-label="profile"
+              aria-label="bookmarks"
               className="flex items-center justify-center"
-              onClick={() => navigate('/dashboard/profile')}
+              onClick={() => navigate('/dashboard/bookmarks')}
             >
-              <CiUser size={24} />
+              <CiBookmark size={24} />
             </button>
           </li>
           <li>
@@ -81,7 +80,7 @@ function Sidebar() {
       </aside>
       {/* aveline Icon */}
       <img
-        src={aveline_ICON}
+        src={AVELINE_ICON}
         alt="aveline-icon"
         className={`${fadeIn} w-14 fixed left-4 top-4 ${isFullscreen ? 'hidden' : ''}  animate-fade-right animate-once animate-duration-[600ms] animate-ease-in-out`}
       />
