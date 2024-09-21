@@ -22,7 +22,7 @@ release/app/dist
 release/build
 .aveline/dll
 
-.idea
+../.idea
 npm-debug.log.*
 *.css.d.ts
 *.sass.d.ts
