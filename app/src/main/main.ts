@@ -77,7 +77,7 @@ const createWindow = async () => {
         : path.join(__dirname, '../../.aveline/dll/preload.js'),
     },
   });
-
+  mainWindow.setVisibleOnAllWorkspaces(true);
   mainWindow.loadURL(resolveHtmlPath('index.html'));
 
   mainWindow.on('ready-to-show', () => {
