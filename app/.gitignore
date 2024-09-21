@@ -21,8 +21,7 @@ node_modules
 release/app/dist
 release/build
 .aveline/dll
-
-../.idea
+ 
 npm-debug.log.*
 *.css.d.ts
 *.sass.d.ts
